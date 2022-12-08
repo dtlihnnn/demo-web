@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="qlsp.css">
+    <title>Bi LUXURY</title>
+    <link rel="icon" type="image/x-icon" href="./img/icon.png"></head>
+
+<body>
+    <!-- SIDEBAR -->
+    <div class="side_bar">
+        <div class="avt">
+            <img src="./img/drm.png" alt="">
+            <h3>Bi LUXURY</h3>
+        </div>
+        <div class="quan_li">
+            <div class="ban_hang ql">
+                <a href="trangbanhang.html">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>Trang bán hàng</span>
+                </a>
+            </div>
+            <div class="ql_sp ql">
+                <a href="qlsp.html">
+                    <i class="fa-brands fa-product-hunt"></i>
+                    <span>Quản lí sản phẩm</span>
+                </a>
+            </div>
+            <div class="ql_don_hang ql">
+                <a href="qldh.html">
+                    <i class="fa-solid fa-o"></i>
+                    <span>Quản lí đơn hàng</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- SIDEBAR END -->
+
+    <!-- NOI DUNG -->
+    <div class="content">
+        <div class="exitBtn" @click="exitBtn">
+            <i class="fa-solid fa-right-from-bracket fa-2xl"></i>
+        </div>
+        <div class="inside">
+            <div class="list">
+                <a href="trangbanhang.html">
+                    <div class="taomoi"><i class="fa-sharp fa-solid fa-plus"></i> Tạo mới sản phẩm</div>
+                </a>
+                <div class="xoasp" @click="del"><i class="fa-sharp fa-solid fa-trash"></i>Xóa sản phẩm</div>
+            </div>
+            <div class="line1"></div>
+
+            <table>
+                <tr class="first">
+                    <th class="ma_sp">Mã sản phẩm</th>
+                    <th class="ten_sp">Tên sản phẩm</th>
+                    <th class="anh">Ảnh</th>
+                    <th class="so_luong">Số lượng</th>
+                    <th class="tinh_trang">Tình trạng</th>
+                    <th class="gia_tien">Giá tiền</th>
+                    <th class="danh_muc">Danh mục</th>
+                    <th class="chuc_nang">Chức năng</th>
+                </tr>
+                <tr v-if="show">
+                    <th>001</th>
+                    <th>Áo sói</th>
+                    <th><img src="./img/ao-soi.jpg" alt=""></th>
+                    <th>1</th>
+                    <th>Còn hàng</th>
+                    <th>500.000VND</th>
+                    <th>Áo thun</th>
+                    <th><i class="fa-sharp fa-solid fa-trash" @click="show = false"></i></th>
+                </tr>
+                <tr v-if="show2">
+                    <th>002</th>
+                    <th>Áo sói</th>
+                    <th><img src="./img/ao-soi.jpg" alt=""></th>
+                    <th>1</th>
+                    <th>Còn hàng</th>
+                    <th>500.000VND</th>
+                    <th>Áo thun</th>
+                    <th><i class="fa-sharp fa-solid fa-trash" @click="show2 = false"></i></th>
+                </tr>
+                <tr v-if="show3">
+                    <th>003</th>
+                    <th>Áo sói</th>
+                    <th><img src="./img/ao-soi.jpg" alt=""></th>
+                    <th>1</th>
+                    <th>Còn hàng</th>
+                    <th>500.000VND</th>
+                    <th>Áo thun</th>
+                    <th><i class="fa-sharp fa-solid fa-trash" @click="show3 = false"></i></th>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        new Vue({
+            el: '.content',
+            data: {
+                show: true,
+                show2: true,
+                show3: true,
+            },
+            methods: {
+                exitBtn() {
+                    alert('Đăng xuất thành công');
+                    window.location.href = 'index.html';
+                },
+                del() {
+                    this.show = false;
+                    this.show2 = false;
+                    this.show3 = false;
+                }
+            },
+        });
+    </script>
+</body>
+
+</html>

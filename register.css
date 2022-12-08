@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,200;1,400;1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* HEADER */
+header {
+    border: 0;
+    background-color: bisque;
+    height: 5rem;
+    position: relative;
+}
+
+header .logo {
+    height: 48px;
+    width: 80px;
+    position: relative;
+    left: 40px;
+    top: 5px;
+    object-fit: contain;
+}
+
+.logo img {
+    width: 70%;
+}
+
+.logo p {
+    position: relative;
+    bottom: 9px;
+    font-weight: 700;
+    left: -10px;
+}
+
+header .nav_bar .ul-items {
+    position: relative;
+    display: flex;
+}
+
+.nav_bar .list-items:hover {
+    border-bottom: 1px solid #000;
+}
+
+.nav_bar .search_input:hover,
+.nav_bar .search:hover {
+    border: 0;
+}
+
+.list-items {
+    position: relative;
+    text-decoration: none;
+    list-style: none;
+    margin-right: 40px;
+    left: 600px;
+    top: -20px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav_bar input {
+    position: relative;
+    border: 0;
+    border-radius: 5px 0 0 5px;
+    padding: 5px;
+}
+
+.nav_bar .search_input {
+    position: relative;
+    top: -23px;
+}
+
+.search {
+    position: relative;
+    background: white;
+    height: 30px;
+    width: 30px;
+    top: -23px;
+    border-radius: 0px 5px 5px 0px;
+    left: 561px;
+    border-left: 1px solid #000;
+    cursor: pointer;
+}
+
+.fa-magnifying-glass {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+}
+
+/*SUBMENU*/
+.shop-submenu {
+    z-index: 10;
+}
+
+.shop-submenu2 {
+    z-index: 10;
+}
+
+.shop-submenu3 {
+    z-index: 10;
+}
+
+.shop-submenu {
+    position: absolute;
+    top: 30px;
+    background-color: white;
+    padding: 10px;
+    list-style: none;
+    display: none;
+    width: 130px;
+    font-family: Helvetica, sans-serif;
+}
+
+.shop-submenu ul {
+    list-style: none;
+}
+
+.shop-submenu li {
+    margin-bottom: 5px;
+    border-top: 1px solid black;
+    padding: 2px;
+}
+
+.shop-submenu li:first-child {
+    border: none;
+}
+
+.shop:hover .shop-submenu {
+    display: block;
+    position: absolute;
+}
+
+.shop-submenu2 {
+    position: absolute;
+    top: 30px;
+    background-color: white;
+    padding: 10px;
+    list-style: none;
+    display: none;
+    width: 130px;
+    font-family: Helvetica, sans-serif;
+}
+
+.shop-submenu2 ul {
+    list-style: none;
+}
+
+.shop-submenu2 li {
+    margin-bottom: 5px;
+    border-top: 1px solid black;
+    padding: 2px;
+}
+
+.shop-submenu2 li:first-child {
+    border: none;
+}
+
+.shop:hover .shop-submenu2 {
+    display: block;
+    position: absolute;
+    left: 130px;
+}
+
+.shop-submenu3 {
+    position: absolute;
+    top: 30px;
+    background-color: white;
+    padding: 10px;
+    list-style: none;
+    display: none;
+    width: 130px;
+    font-family: Helvetica, sans-serif;
+}
+
+.shop-submenu3 ul {
+    list-style: none;
+}
+
+.shop-submenu3 li {
+    margin-bottom: 5px;
+    border-top: 1px solid black;
+    padding: 2px;
+}
+
+.shop-submenu3 li:first-child {
+    border: none;
+}
+
+.shop:hover .shop-submenu3 {
+    display: block;
+    position: absolute;
+    left: 260px;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+.register {
+    position: relative;
+    background-color: rgb(209, 209, 209);
+    width: 500px;
+    height: 580px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 30px;
+}
+
+h1 {
+    padding-top: 20px;
+}
+
+.register input {
+    font-size: 15px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.name,
+.longInput {
+    position: relative;
+    left: 8%;
+}
+
+.longInput {
+    width: 400px;
+}
+
+.name {
+    width: 192px;
+}
+
+.p {
+    font-size: 13px;
+    margin-left: 10px;
+}
+
+.birthday {
+    width: 90px;
+    height: 30px;
+    margin: 0px 0px 10px 10px;
+}
+
+.sex {
+    margin: 10px 0px 10px 10px;
+    font-size: 15px;
+}
+
+.sinhNhat,
+.gioiTinh {
+    position: relative;
+    left: 8%;
+}
+
+.form {
+    position: relative;
+    margin: auto;
+}
+
+.line {
+    border-bottom: 1px solid black;
+    width: 80%;
+    display: flex;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.form button {
+    display: flex;
+    margin: auto;
+    background: #42B72A;
+    color: white;
+    left: 62%;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    justify-content: center;
+    width: 200px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
+#weak {
+    font-size: 14px;
+    color: rgb(213, 9, 9);
+    margin-left: 50px;
+    display: none;
+}
+#kiemtra {
+    font-size: 14px;
+    color: rgb(213, 9, 9);
+    margin-left: 50px;
+    display: none;
+    position: relative;
+    top: -25px;
+}
+
+#show,
+#hide {
+    position: absolute;
+    z-index: 10;
+    width: 25px;
+    left: 410px;
+    top: 210px;
+    cursor: pointer;
+}
+#show {
+    display: none;
+}
+
+
+.show {
+    position: relative;
+    left: 82%;
+    width: 30px;
+    bottom: 40px;
+}
+#show2,
+#hide2 {
+    position: relative;
+    width: 25px;
+    cursor: pointer;
+}
+#show2 {
+    display: none;
+}

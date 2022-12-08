@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>Bi LUXURY</title>
+    <link rel="icon" type="image/x-icon" href="./img/icon.png"></head>
+<style>
+    h1 {
+        display: flex;
+        justify-content: center;
+        margin-top: 5%;
+    }
+    #image {
+        position: relative;
+        width: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+        padding-top: 50px;
+    }
+    #line {
+        border: 10px solid #000;
+        background-color: black;
+        width: 25%;
+        left: 36%;
+        transform: translateX(-50%);
+        position: absolute;
+        top: 46%;
+        transform: rotate(-45deg);
+        opacity: 90%;
+    }
+    #line2 {
+        border: 10px solid #000;
+        background-color: black;
+        width: 25%;
+        left: 36%;
+        transform: translateX(-50%);
+        position: absolute;
+        top: 46%;
+        transform: rotate(45deg);
+        opacity: 90%;
+    }
+</style>
+<body>
+    <!-- HEADER -->
+    <header>
+        <nav class="nav_bar">
+            <div class="logo">
+                <a href="home.html">
+                    <img src="./img/3524821.png" alt="">
+                    <p>Bi LUXURY</p>
+                </a>
+            </div>
+
+            <!-- MENU SHOP SALE ... -->
+            <ul class="ul-items">
+                <li class="list-items shop"><a href="shop.html">SHOP <i class="fa-solid fa-angle-down fa-xs"></i></a>
+
+                    <!-- SUBMENU -->
+                    <div class="shop-submenus">
+                        <div class="shop-submenu">
+                            <ul class="ul-sub">
+                                <li class="li-sub" style="font-weight: 900;"><a href="">Áo</a></li>
+                                <li class="li-sub"><a href="ao.html">Tất cả áo</a></li>
+                                <li class="li-sub"><a href="">Áo khoác</a></li>
+                                <li class="li-sub"><a href="">Áo sơ mi</a></li>
+                                <li class="li-sub"><a href="">Áo len</a></li>
+                                <li class="li-sub"><a href="">Áo hoodie</a></li>
+                                <li class="li-sub"><a href="">Áo áo</a></li>
+                            </ul>
+                        </div>
+                        <div class="shop-submenu2">
+                            <ul class="ul-sub">
+                                <li class="li-sub" style="font-weight: 900;"><a href="">Quần</a></li>
+                                <li class="li-sub"><a href="quan.html">Tất cả quần</a></li>
+                                <li class="li-sub"><a href="">Quần jean</a></li>
+                                <li class="li-sub"><a href="">Quần dài</a></li>
+                                <li class="li-sub"><a href="">Quần nỉ</a></li>
+                                <li class="li-sub"><a href="">Quần short</a></li>
+                                <li class="li-sub"><a href="">Quần kaki</a></li>
+                            </ul>
+                        </div>
+                        <div class="shop-submenu3">
+                            <ul class="ul-sub">
+                                <li class="li-sub" style="font-weight: 900;"><a href="">Phụ kiện</a></li>
+                                <li class="li-sub"><a href="phukien.html">Tất phụ kiện</a></li>
+                                <li class="li-sub"><a href="">Nhẫn</a></li>
+                                <li class="li-sub"><a href="">Dây chuyền</a></li>
+                                <li class="li-sub"><a href="">Dây lưng</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- SUBMENU END -->
+                </li>
+                <li class="list-items"><a href="sale.html">SALE</a></li>
+                <li class="list-items"><a href="hot.html">HOT</a></li>
+                <li class="list-items"><a href="contact.html">CONTACT</a></li>
+                <li class="list-items"><a href="about.html">ABOUT US</a></li>
+                <li class="search_input list-items"><input type="text" placeholder="Tìm kiếm" id="search"></li>
+                <li class="search list-items"><i class="fa-solid fa-magnifying-glass" onclick="search()"></i></li>
+                <li class="list-items"><a href="user.html"><i class="fa-regular fa-user"></i></a></li>
+                <li class="list-items"><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            </ul>
+            <!-- MENU SHOP SALE END... -->
+        </nav>
+    </header>
+    <!-- HEADER END -->
+    <h1>Không tìm thấy sản phẩm</h1>
+    <img id="image" src="./img/search.webp" alt="">
+    <div id="line"></div>
+    <div id="line2"></div>
+
+    <script src="main.js"></script>
+</body>
+</html>

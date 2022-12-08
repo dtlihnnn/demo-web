@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,200;1,400;1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* HEADER */
+header {
+    border: 0;
+    background-color: bisque;
+    height: 5rem;
+    position: relative;
+}
+
+header .logo {
+    height: 48px;
+    width: 80px;
+    position: relative;
+    left: 40px;
+    top: 5px;
+    object-fit: contain;
+}
+
+.logo img {
+    width: 70%;
+}
+
+.logo p {
+    position: relative;
+    bottom: 9px;
+    font-weight: 700;
+    left: -10px;
+}
+
+header .nav_bar .ul-items {
+    position: relative;
+    display: flex;
+}
+
+.nav_bar .list-items:hover {
+    border-bottom: 1px solid #000;
+}
+
+.nav_bar .search_input:hover,
+.nav_bar .search:hover {
+    border: 0;
+}
+
+.list-items {
+    position: relative;
+    text-decoration: none;
+    list-style: none;
+    margin-right: 40px;
+    left: 600px;
+    top: -20px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav_bar input {
+    position: relative;
+    border: 0;
+    border-radius: 5px 0 0 5px;
+    padding: 5px;
+}
+
+.nav_bar .search_input {
+    position: relative;
+    top: -23px;
+}
+
+.search {
+    position: relative;
+    background: white;
+    height: 30px;
+    width: 30px;
+    top: -23px;
+    border-radius: 0px 5px 5px 0px;
+    left: 561px;
+    border-left: 1px solid #000;
+    cursor: pointer;
+}
+
+.fa-magnifying-glass {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+}
+
+/*SUBMENU*/
+.shop-submenu {
+    z-index: 10;
+}
+
+.shop-submenu2 {
+    z-index: 10;
+}
+
+.shop-submenu3 {
+    z-index: 10;
+}
+
+.shop-submenu {
+    position: absolute;
+    top: 30px;
+    background-color: white;
+    padding: 10px;
+    list-style: none;
+    display: none;
+    width: 130px;
+    font-family: Helvetica, sans-serif;
+}
+
+.shop-submenu ul {
+    list-style: none;
+}
+
+.shop-submenu li {
+    margin-bottom: 5px;
+    border-top: 1px solid black;
+    padding: 2px;
+}
+
+.shop-submenu li:first-child {
+    border: none;
+}
+
+.shop:hover .shop-submenu {
+    display: block;
+    position: absolute;
+}
+
+.shop-submenu2 {
+    position: absolute;
+    top: 30px;
+    background-color: white;
+    padding: 10px;
+    list-style: none;
+    display: none;
+    width: 130px;
+    font-family: Helvetica, sans-serif;
+}
+
+.shop-submenu2 ul {
+    list-style: none;
+}
+
+.shop-submenu2 li {
+    margin-bottom: 5px;
+    border-top: 1px solid black;
+    padding: 2px;
+}
+
+.shop-submenu2 li:first-child {
+    border: none;
+}
+
+.shop:hover .shop-submenu2 {
+    display: block;
+    position: absolute;
+    left: 130px;
+}
+
+.shop-submenu3 {
+    position: absolute;
+    top: 30px;
+    background-color: white;
+    padding: 10px;
+    list-style: none;
+    display: none;
+    width: 130px;
+    font-family: Helvetica, sans-serif;
+}
+
+.shop-submenu3 ul {
+    list-style: none;
+}
+
+.shop-submenu3 li {
+    margin-bottom: 5px;
+    border-top: 1px solid black;
+    padding: 2px;
+}
+
+.shop-submenu3 li:first-child {
+    border: none;
+}
+
+.shop:hover .shop-submenu3 {
+    display: block;
+    position: absolute;
+    left: 260px;
+}
+
+
+/* BODY */
+body {
+    background: white;
+}
+/* LOGIN */
+.login {
+    position: relative;
+    width: 500px;
+    height: 450px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(209, 209, 209);
+    margin-top: 20px;
+}
+
+h1 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+}
+
+.login input {
+    position: relative;
+    left: 50%;
+    width: 70%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    padding: 15px;
+    border: none;
+    border-bottom: 1px solid black;
+    margin-top: 20px;
+}
+
+#show,
+#hide {
+    position: absolute;
+    z-index: 10;
+    width: 30px;
+    left: 370px;
+    top: 160px;
+    cursor: pointer;
+}
+#show {
+    display: none;
+}
+
+.form {
+    position: relative;
+    padding-top: 40px;
+}
+
+.form a {
+    position: relative;
+    color: rgb(5, 5, 103);
+    top: 50px;
+    right: 60px;
+}
+
+button {
+    position: relative;
+    color: white;
+    width: 200px;
+    background-color: #1877F2;
+    padding: 5px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 65px;
+    cursor: pointer;
+}
+
+.line {
+    position: relative;
+    background: black;
+    width: 70%;
+    border-bottom: 1px solid black;
+    left: 50%;
+    top: 90px;
+    transform: translateX(-50%);
+}
+
+.dangki {
+    position: relative;
+    background: #42B72A;
+    left: 62%;
+}

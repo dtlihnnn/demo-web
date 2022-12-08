@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,200;1,400;1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* HEADER */
+header {
+    border: 0;
+    background-color: bisque;
+    height: 5rem;
+    position: relative;
+}
+
+header .logo {
+    height: 48px;
+    width: 70px;
+    position: relative;
+    left: 40px;
+    top: 5px;
+    object-fit: contain;
+}
+
+.logo img {
+    width: 70%;
+}
+
+.logo p {
+    position: relative;
+    bottom: 9px;
+    right: 6px;
+    font-weight: 700;
+}
+
+header .nav_bar .ul-items {
+    position: relative;
+    display: flex;
+}
+
+.nav_bar .list-items:hover {
+    border-bottom: 1px solid #000;
+}
+
+.nav_bar .search_input:hover,
+.nav_bar .search:hover {
+    border: 0;
+}
+
+.list-items {
+    position: relative;
+    text-decoration: none;
+    list-style: none;
+    margin-right: 40px;
+    left: 600px;
+    top: -20px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav_bar input {
+    position: relative;
+    border: 0;
+    border-radius: 5px 0 0 5px;
+    padding: 5px;
+}
+
+.nav_bar .search_input {
+    position: relative;
+    top: -23px;
+}
+
+.search {
+    position: relative;
+    background: white;
+    height: 30px;
+    width: 30px;
+    top: -23px;
+    border-radius: 0px 5px 5px 0px;
+    left: 561px;
+    border-left: 1px solid #000;
+    cursor: pointer;
+}
+
+.fa-magnifying-glass {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+}
+
+/*SUBMENU*/
+.shop-submenu {
+    z-index: 10;
+}
+
+.shop-submenu2 {
+    z-index: 10;
+}
+
+.shop-submenu3 {
+    z-index: 10;
+}
+
+.shop-submenu {
+    position: absolute;
+    top: 30px;
+    background-color: white;
+    padding: 10px;
+    list-style: none;
+    display: none;
+    width: 130px;
+    font-family: Helvetica, sans-serif;
+}
+
+.shop-submenu ul {
+    list-style: none;
+}
+
+.shop-submenu li {
+    margin-bottom: 5px;
+    border-top: 1px solid black;
+    padding: 2px;
+}
+
+.shop-submenu li:first-child {
+    border: none;
+}
+
+.shop:hover .shop-submenu {
+    display: block;
+    position: absolute;
+}
+
+.shop-submenu2 {
+    position: absolute;
+    top: 30px;
+    background-color: white;
+    padding: 10px;
+    list-style: none;
+    display: none;
+    width: 130px;
+    font-family: Helvetica, sans-serif;
+}
+
+.shop-submenu2 ul {
+    list-style: none;
+}
+
+.shop-submenu2 li {
+    margin-bottom: 5px;
+    border-top: 1px solid black;
+    padding: 2px;
+}
+
+.shop-submenu2 li:first-child {
+    border: none;
+}
+
+.shop:hover .shop-submenu2 {
+    display: block;
+    position: absolute;
+    left: 130px;
+}
+
+.shop-submenu3 {
+    position: absolute;
+    top: 30px;
+    background-color: white;
+    padding: 10px;
+    list-style: none;
+    display: none;
+    width: 130px;
+    font-family: Helvetica, sans-serif;
+}
+
+.shop-submenu3 ul {
+    list-style: none;
+}
+
+.shop-submenu3 li {
+    margin-bottom: 5px;
+    border-top: 1px solid black;
+    padding: 2px;
+}
+
+.shop-submenu3 li:first-child {
+    border: none;
+}
+
+.shop:hover .shop-submenu3 {
+    display: block;
+    position: absolute;
+    left: 260px;
+}
+
+/*--------------cart----------------*/
+.cart {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    padding-top: 30px;
+
+}
+
+.cart h2 {
+    margin-bottom: 20px;
+}
+
+.cart table {
+    width: 100%;
+}
+
+.cart table thead tr th:first-child {
+    text-align: left;
+}
+
+.cart table tr td {
+    border-bottom: 1px solid #ddd;
+    padding: 12px 0;
+}
+
+.cart table thead tr th:last-child {
+    text-align: right;
+}
+
+.cart table tbody tr td:last-child {
+    text-align: right;
+}
+
+.image {
+    display: flex;
+    align-items: center;
+}
+
+.image img {
+    width: 70px;
+}
+
+.cart input {
+    width: 30px;
+    outline: none;
+}
+
+.price-total {
+    text-align: right;
+}
+
+.price-total p {
+    font-weight: bold;
+}
+
+.content #result {
+    left: -43%;
+    position: relative;
+}
+
+.line {
+    width: 102%;
+    border-bottom: 1px solid rgb(126, 126, 126);
+    margin: 10px 0px 20px 0px;
+}

@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,200;1,400;1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppin', sans-serif;
+}
+
+body {
+    background-color: #001C41;
+}
+
+/* SIDEBAR*/
+.side_bar {
+    float: left;
+    position: relative;
+    color: white;
+    margin: 40px 0px;
+    width: 15.5vw;
+    height: 500px;
+}
+
+.side_bar img {
+    width: 6.5vw;
+    border-radius: 50%;
+    display: flex;
+    margin: auto;
+}
+
+.side_bar .avt {
+    padding: 10px;
+}
+
+.side_bar h3 {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 20px;
+}
+
+.side_bar .quanli {
+    position: relative;
+}
+
+.ql {
+    position: relative;
+    font-size: 16px;
+    font-weight: 600;
+    left: 15%;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.ql_sp:hover,
+.ql_don_hang:hover {
+    background: rgb(69, 71, 233);
+    width: 12.5vw;
+    padding: 10px 0px 10px 10px;
+    border-radius: 10px;
+}
+
+.ql:first-child {
+    margin-top: 30px;
+}
+
+.side_bar i {
+    color: white;
+    margin-right: 5px;
+}
+
+.ban_hang {
+    background: orange;
+    width: 190px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.side_bar a {
+    text-decoration: none;
+    color: white;
+}
+
+/* THEM SAN PHAM */
+
+.content {
+    position: relative;
+    background: #f5f1f1;
+    width: 80vw;
+    float: right;
+    top: 5vh;
+    height: 93vh;
+    border-right: 1px solid #000;
+    border-radius: 3px 0px;
+}
+
+.inside {
+    position: relative;
+    background: white;
+    top: 5%;
+    left: 3%;
+    box-shadow: 0px 0px 10px 0px;
+    padding: 20px;
+    border-radius: 3px;
+    width: 77vw;
+    height: 88vh;
+}
+
+.add {
+    display: flex;
+    gap: 40px;
+}
+
+.add span {
+    color: rgb(8, 73, 8);
+}
+
+
+.list {
+    background-color: rgb(140, 214, 140);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.line1 {
+    border: 1px solid rgb(183, 71, 71);
+    margin: 15px 0;
+    box-shadow: 0px 2px 2px 0px;
+}
+
+.line2 {
+    border-bottom: 1px solid rgb(157, 157, 157);
+    margin: 15px 0;
+}
+
+.enter_info {
+    margin-top: 20px;
+    display: grid;
+    row-gap: 15px;
+    grid-template-columns: 20vw 20vw 20vw 20vw;
+    grid-template-rows: 50px 50px;
+}
+
+.enter_info input {
+    border: 1px solid rgb(188, 188, 188);
+    background: #ece9e9;
+    border-radius: 3px;
+    height: 30px;
+    width: 15vw;
+    margin-top: 5px;
+}
+
+select {
+    border: 1px solid rgb(188, 188, 188);
+    background: #ece9e9;
+    border-radius: 3px;
+    height: 30px;
+    width: 15vw;
+    margin-top: 5px;
+}
+
+.item {
+    position: relative;
+}
+
+.item span {
+    font-weight: 550;
+}
+
+/* TAI ANH LEN*/
+.add_image {
+    margin-top: 30px;
+}
+
+.add_image input {
+    visibility: hidden;
+}
+
+.add_image label {
+    color: white;
+    background: rgb(2, 2, 72);
+    border-radius: 5px;
+    padding: 10px;
+    top: 15px;
+    position: relative;
+}
+
+/* MO TA SAN PHAM*/
+.describe {
+    margin-top: 40px;
+}
+
+.describe p,
+.add_image p {
+    font-weight: 550;
+}
+
+textarea {
+    width: 75vw;
+    margin-top: 10px;
+    border: 1px solid rgb(188, 188, 188);
+    background: #e4e4e4;
+    padding: 10px;
+}
+
+
+/*UPLOAD CANCEL BUTTON*/
+.btn {
+    display: flex;
+    column-gap: 10px;
+    margin-top: 20px;
+}
+
+.upload {
+    background-color: rgb(140, 214, 140);
+}
+
+.cancel {
+    background-color: rgb(205, 79, 100);
+}
+
+#upload {
+    color: rgb(15, 48, 15);
+}
+
+#cancel {
+    color: rgb(131, 8, 29);
+}
+
+.upload,
+.cancel {
+    width: 80px;
+    padding: 7px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#upload,
+#cancel {
+    display: flex;
+    justify-content: center;
+    font-weight: 550;
+}
+
+/* EXIT*/
+.exitBtn {
+    position: absolute;
+    right: 2vw;
+    top: -26px;
+    cursor: pointer;
+}
+
+.exitBtn i {
+    color: white;
+}

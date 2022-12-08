@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="trangbanhang.css">
+    <title>Bi LUXURY</title>
+    <link rel="icon" type="image/x-icon" href="./img/icon.png"></head>
+
+<body>
+    <!-- SIDEBAR -->
+    <div class="side_bar">
+        <div class="avt">
+            <img src="./img/drm.png" alt="">
+            <h3>Bi LUXURY</h3>
+        </div>
+        <div class="quan_li">
+            <div class="ban_hang ql">
+                <a href="trangbanhang.html">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>Trang bán hàng</span>
+                </a>
+            </div>
+            <div class="ql_sp ql">
+                <a href="qlsp.html">
+                    <i class="fa-brands fa-product-hunt"></i>
+                    <span>Quản lí sản phẩm</span>
+                </a>
+            </div>
+            <div class="ql_don_hang ql">
+                <a href="qldh.html">
+                    <i class="fa-solid fa-o"></i>
+                    <span>Quản lí đơn hàng</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- SIDEBAR END -->
+
+    <!-- NOI DUNG -->
+
+    <div class="content">
+        <div class="exitBtn" @click="exitBtn">
+            <i class="fa-solid fa-right-from-bracket fa-2xl"></i>
+        </div>
+        <div class="inside">
+            <h2>Tạo mới sản phẩm</h2>
+            <div class="line1"></div>
+            <div class="add">
+                <div class="nha_cung_cap list">
+                    <i class="fa-solid fa-folder-plus"></i>
+                    <span>Thêm nhà cung cấp</span>
+                </div>
+                <div class="danh_muc list">
+                    <i class="fa-solid fa-folder-plus"></i>
+                    <span>Thêm danh mục</span>
+                </div>
+                <div class="tinh_trang list">
+                    <i class="fa-solid fa-folder-plus"></i>
+                    <span>Thêm tình trạng</span>
+                </div>
+            </div>
+            <div class="line2"></div>
+            <div class="enter_info" id="info">
+                <div class="item">
+                    <span class="ten">Mã sản phẩm</span><br>
+                    <input type="text" v-model="ma">
+                </div>
+                <div class="item">
+                    <span class="ten">Tên sản phẩm</span><br>
+                    <input type="text" v-model="ten">
+                </div>
+                <div class="item">
+                    <span class="ten">Số lượng</span><br>
+                    <input type="text" v-model="soluong">
+                </div>
+                <div class="item">
+                    <span class="ten" id="tinhtrang">Tình trạng</span><br>
+                    <select aria-label="tình trạng" id="tinhtrang" v-model="tinhtrang">
+                        <option value="1" selected="1">--Chọn tình trạng--</option>
+                        <option value="2">Còn hàng</option>
+                        <option value="3">Hết hàng</option>
+                    </select>
+                </div>
+                <div class="item">
+                    <span class="ten">Danh mục</span><br>
+                    <select aria-label="Danh mục" id="danhmuc" v-model="danhmuc">
+                        <option value="1" selected="1">--Chọn danh mục--</option>
+                        <option value="2">Quần</option>
+                        <option value="3">Áo</option>
+                    </select>
+                </div>
+                <div class="item">
+                    <span class="ten">Nhà cung cấp</span><br>
+                    <select aria-label="Nhà cung cấp" id="cungcap" v-model="cungcap">
+                        <option value="1" selected="1">--Chọn danh mục--</option>
+                        <option value="2">Gucci</option>
+                        <option value="3">LV</option>
+                    </select>
+                </div>
+                <div class="item">
+                    <span class="ten">Giá bán</span><br>
+                    <input type="text" v-model="giaban">
+                </div>
+                <div class="item">
+                    <span class="ten">Giá vốn</span><br>
+                    <input type="text" v-model="giavon">
+                </div>
+            </div>
+            <div class="add_image">
+                <p>Thêm ảnh sản phẩm</p>
+                <label for="file"><i class="fa-sharp fa-solid fa-cloud-arrow-up"></i> Chọn ảnh</label>
+                <input class="addimage" id="file" name="file" type="file" src="" alt="">
+            </div>
+            <div class="describe">
+                <p>Thêm mô tả sản phẩm</p>
+                <!-- <input type="text" placeholder=""> -->
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+            </div>
+            <div class="line2"></div>
+            <div class="btn">
+                <div class="upload" @click="uploadClick">
+                    <p id="upload">Đăng</p>
+                </div>
+                <div class="cancel" @click="cancelClick">
+                    <p id="cancel">Hủy</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- NOI DUNG END -->
+    <script>
+        new Vue({
+            el: '.content',
+            data: {
+                ma: '',
+                ten: '',
+                soluong: '',
+                giaban: '',
+                giavon: '',
+                path: './index.html',
+                cungcap: 1,
+                danhmuc: 1,
+                tinhtrang: 1,
+            },
+            methods: {
+                uploadClick() {
+                    if (this.ma == '') {
+                        alert('Hãy nhập mã sản phầm')
+                    }
+                    else if (this.ten == '') {
+                        alert('Hãy nhập tên sản phẩm');
+                    }
+                    else if (this.soluong == '') {
+                        alert("Hãy nhập số lượng sản phẩm");
+                    }
+                    else if (this.tinhtrang < 2) {
+                        alert('Hãy chọn tình trạng')
+                    }
+                    else if (this.danhmuc < 2) {
+                        alert('Hãy chọn danh mục')
+                    }
+                    else if (this.cungcap < 2) {
+                        alert('Hãy chọn nhà cung cấp')
+                    }
+                    else if (this.giaban == '') {
+                        alert("Hãy nhập giá bán sản phẩm");
+                    }
+                    else if (this.giavon == '') {
+                        alert("Hãy nhập giá vốn sản phẩm");
+                    }
+                    else {
+                        alert('Đăng sản phẩm thành công');
+                        this.ma = '';
+                        this.ten = '';
+                        this.soluong = '';
+                        this.giaban = '';
+                        this.giavon = '';
+                        this.tinhtrang = 1;
+                        this.danhmuc = 1;
+                        this.cungcap = 1;
+                    }
+                },
+                cancelClick() {
+                    alert('Hủy đăng sản phẩm thành công');
+                    this.ma = '';
+                    this.ten = '';
+                    this.soluong = '';
+                    this.giaban = '';
+                    this.giavon = '';
+                    this.tinhtrang = 1;
+                    this.danhmuc = 1;
+                    this.cungcap = 1;
+                },
+                exitBtn() {
+                    alert('Đăng xuất thành công');
+                    window.location.href = this.path;
+                }
+            },
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,200;1,400;1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppin', sans-serif;
+}
+
+body {
+    background-color: #001C41;
+}
+
+/* SIDEBAR*/
+.side_bar {
+    float: left;
+    position: relative;
+    color: white;
+    margin: 40px 0px;
+    width: 15.5vw;
+    height: 500px;
+}
+
+.side_bar img {
+    width: 6.5vw;
+    border-radius: 50%;
+    display: flex;
+    margin: auto;
+}
+
+.side_bar .avt {
+    padding: 10px;
+}
+
+.side_bar h3 {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 20px;
+}
+
+.side_bar .quanli {
+    position: relative;
+}
+
+.ql {
+    position: relative;
+    font-size: 16px;
+    font-weight: 600;
+    left: 15%;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.ban_hang:hover,
+.ql_don_hang:hover {
+    background: rgb(69, 71, 233);
+    width: 12.5vw;
+    padding: 10px 0px 10px 10px;
+    border-radius: 10px;
+}
+
+.ql:first-child {
+    margin-top: 30px;
+}
+
+.side_bar i {
+    color: white;
+    margin-right: 5px;
+}
+
+.ql_sp {
+    background: orange;
+    width: 200px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.side_bar a {
+    text-decoration: none;
+    color: white;
+}
+
+/* EXIT*/
+.exitBtn {
+    position: absolute;
+    right: 2vw;
+    top: -35px;
+    cursor: pointer;
+}
+
+.exitBtn i {
+    color: white;
+}
+
+/* NOI DUNG */
+.content {
+    position: relative;
+    background: #f5f1f1;
+    width: 80vw;
+    float: right;
+    top: 7vh;
+    height: 93vh;
+    border-right: 1px solid #000;
+    border-radius: 3px 0px;
+}
+
+.inside {
+    position: relative;
+    background: white;
+    top: 5%;
+    left: 3.5%;
+    box-shadow: 0px 0px 10px 0px;
+    padding: 20px;
+    border-radius: 3px;
+    width: 77vw;
+    height: 88vh;
+}
+
+.line1 {
+    border: 1px solid rgb(183, 71, 71);
+    margin: 15px 0;
+    box-shadow: 0px 2px 2px 0px;
+}
+
+.list {
+    display: flex;
+    column-gap: 10px;
+}
+
+.taomoi {
+    background-color: rgb(140, 214, 140);
+    width: 12vw;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.xoasp {
+    background-color: gray;
+    width: 9vw;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+i {
+    margin-right: 5px;
+}
+
+/* TABLE */
+table {
+    border-collapse: collapse;
+}
+
+th {
+    padding: 20px;
+    border: 1px solid #000;
+}
+
+table img {
+    width: 5vw;
+    object-fit: contain;
+}
+
+.first {
+    background: #ece9e9;
+}
+
+.anh {
+    width: 17vw;
+}
+
+.ten_sp {
+    width: 13vw;
+}
+
+.tinh_trang {
+    width: 9vw;
+}

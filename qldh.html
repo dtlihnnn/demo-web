@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="qldh.css">
+    <title>Bi LUXURY</title>
+    <link rel="icon" type="image/x-icon" href="./img/icon.png"></head>
+
+<body>
+    <!-- SIDEBAR -->
+    <div class="side_bar">
+        <div class="avt">
+            <img src="./img/drm.png" alt="">
+        </div>
+        <div class="quan_li">
+            <div class="ban_hang ql">
+                <a href="trangbanhang.html">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+            </div>
+            <div class="ql_sp ql">
+                <a href="qlsp.html">
+                    <i class="fa-brands fa-product-hunt"></i>
+                </a>
+            </div>
+            <div class="ql_don_hang ql">
+                <a href="qldh.html">
+                    <i class="fa-solid fa-o"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- SIDEBAR END -->
+
+    <!-- NOI DUNG -->
+    <div class="content">
+        <div class="exitBtn" @click="exitBtn">
+            <i class="fa-solid fa-right-from-bracket fa-2xl"></i>
+        </div>
+        <div class="inside">
+            <h3>Quản lí đơn hàng</h3>
+            <div class="line1"></div>
+            <div class="table">
+                <table>
+                    <tr class="first">
+                        <th>Mã hàng</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Ảnh</th>
+                        <th>Số lượng</th>
+                        <th>Giá bán</th>
+                        <th></th>
+                    </tr>
+                    <tr v-if="show">
+                        <th class="ma_hang">001</th>
+                        <th class="ten_hang">Áo sói vip pro</th>
+                        <th class="anh"><img src="./img/ao-soi.jpg" alt=""></th>
+                        <th class="so_luong"><input type="text"></th>
+                        <th class="gia_ban">500.000</th>
+                        <th class="trash"><i @click="show = false" class="fa-sharp fa-solid fa-trash"></i></th>
+                    </tr>
+                    <tr v-if="show2">
+                        <th class="ma_hang">002</th>
+                        <th class="ten_hang">Áo sói vip pro</th>
+                        <th class="anh"><img src="./img/ao-soi.jpg" alt=""></th>
+                        <th class="so_luong"><input type="text"></th>
+                        <th class="gia_ban">500.000</th>
+                        <th class="trash"><i @click="show2 = false" class="fa-sharp fa-solid fa-trash"></i></th>
+                    </tr>
+                    <tr v-if="show3">
+                        <th class="ma_hang">003</th>
+                        <th class="ten_hang">Áo sói vip pro</th>
+                        <th class="anh"><img src="./img/ao-soi.jpg" alt=""></th>
+                        <th class="so_luong"><input type="text"></th>
+
+                        <th class="gia_ban">500.000</th>
+                        <th class="trash"><i @click="show3 = false" class="fa-sharp fa-solid fa-trash"></i></th>
+                    </tr>
+                    <tr v-if="show4">
+                        <th class="ma_hang">004</th>
+                        <th class="ten_hang">Áo sói vip pro</th>
+                        <th class="anh"><img src="./img/ao-soi.jpg" alt=""></th>
+                        <th class="so_luong"><input type="text"></th>
+                        <th class="gia_ban">500.000</th>
+                        <th class="trash"><i @click="show4 = false" class="fa-sharp fa-solid fa-trash"></i></th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="info">
+            <h3>Thông tin thanh toán</h3>
+            <div class="line1"></div>
+            <div class="form">
+                <label for="name">Họ tên khách hàng</label>
+                <input type="text" v-model="name" name="name" id="name" placeholder="Nhập tên khách hàng">
+                <label for="ghichu">Ghi chú đơn hàng</label>
+                <textarea type="text" v-model="note" name="ghichu" id="ghichu" placeholder="Ghi chú cho đơn hàng"></textarea>
+                <label for="">Hình thức chuyển khoản</label>
+                <select name="" id="">
+                    <option value="1" selected>--Chọn hình thức thanh toán--</option>
+                    <option value="2">Thanh toán qua thẻ tín dụng</option>
+                    <option value="3">Thanh toán bằng tiền mặt</option>
+                </select>
+                <div class="tinhtien">
+                    <div class="tam_tinh">
+                        <h3>Tạm tính tiền hàng</h3>
+                        <div id="tam_tinh"> = 5.000.000 VND</div>
+                    </div>
+                    <div class="sale">
+                        <h3>Giảm giá</h3>
+                        <div id="sale">0</div>
+                    </div>
+                    <div class="tong">
+                        <h3>Tổng thanh toán</h3>
+                        <div id="tong">= 5.000.000 VND</div>
+                    </div>
+                    <div class="da_tra">
+                        <h3>Khách hàng đưa tiền</h3>
+                        <div id="da_tra">0</div>
+                    </div>
+                    <div class="con_thieu">
+                        <h3>Khách hàng còn nợ</h3>
+                        <div id="con_thieu">= 5.000.000 VND</div>
+                    </div>
+                </div>
+                <button @click="btnClick">Lưu đơn hàng</button>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        new Vue({
+            el: '.content',
+            data: {
+                show: true,
+                show2: true,
+                show3: true,
+                show4: true,
+                name: '',
+                note: '',
+            },
+            methods: {
+                exitBtn() {
+                    alert('Đăng xuất thành công');
+                    window.location.href = 'index.html';
+                },
+                btnClick(){
+                    if(this.name == ''){
+                        alert("Hãy nhập đầy đủ họ tên");
+                    }
+                    else if(this.note == ''){
+                        alert("Hãy nhập ghi chú");
+                    }
+                    else {
+                        alert("Lưu thông tin thành công")
+                    }
+                }
+            },
+        });
+    </script>
+</body>
+
+</html>
